@@ -1,0 +1,196 @@
+<!DOCTYPE html>
+<html lang="pl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Rank generator</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Encode+Sans:wdth,wght@102.5,100..900&display=swap" rel="stylesheet">   
+</head>
+<body>
+    <header>
+        <nav>
+            <a href="index.html" class="leftNav">AnimeRankGenerator</a>
+            <a href="myAnime.html" class="rightNav">Moje anime</a>
+            <a href="allAnimeRanking.html" class="rightNav">Klasyczny ranking</a>
+            <a href="customAnimeRanking.html" class="rightNav">Własny ranking</a>
+        </nav>
+    </header>
+    <main>
+        <h2>Instrukcja obsługi i uwagi</h2>
+        <p>
+            1. Wpisane wartości oznaczają wartość z zakresu od 0 do 1000, na jaką szacujesz jakość realizacji parametru dla danego anime.
+            <br>Im wyższa, tym bardziej na plus w rankingu, a im niższa, tym na minus. <br>
+            2. Gdy nie można ocenić jakiejś cechy (bo jej nie znamy lub dane anime jej nie dotyczy), napisz wartość -1 <br>
+            3. Sam decydujesz, co czyni cechę dobrze zrealizowaną przez anime. Jeśli nie lubisz kontrowersyjnych anime, przyznawaj wysokie wartości tym, <br>
+            które takie nie są lub na odwrót. <br>
+            4. Uważaj! Zawsze gdy wpisujesz niską wartość, zastanów się, czy jest ona źle zrealizowana, czy po prostu to anime jej nie dotyczy (wartość -1) <br>
+            5. Dane o anime zapisywane są w local storage. To oznacza, że nie znikną po zamknięciu przeglądarki, tylko są trwałe <br>
+            (przynajmniej dopóki nie zaginą przez czynniki zewnętrzne, np. aktualizację przeglądarki)
+            6. Staraj się oceniać anime nie tylko proporcjonalnie względem siebie, ale też względem skali 0-1000. Przekładając to na mniej skomplikowany język, <br>
+            używaj całego zakresu od 0 do 1000, bo ranking klasyczny traktuje nieokreślone cechy jako takie o wartości 500. Może to spowodować pewnego rodzaju heurystykę. <br>
+            (Jeśli oceniasz anime od 0 do 200 wyłącznie pod względem muzyki, anime bez muzyki będzie wyżej w rankingu od nich wszystkich :) )
+        </p>
+        <form>
+            <h1>Dodaj anime</h1>
+            <label for="nazwa">Nazwa anime</label>
+            <input type="text" id="nazwa" name="nazwa" value="">
+            <br>
+
+            <label for="fabula">Fabuła</label>
+            <input type="text" id="fabula" name="fabula" value="">
+            <br>
+
+            <label for="swiat">Świat</label>
+            <input type="text" id="swiat" name="swiat" value="">
+            <br>
+
+            <label for="postacie">Postacie</label>
+            <input type="text" id="postacie" name="postacie" value="">
+            <br>
+
+            <label for="protagonista">Protagonista</label>
+            <input type="text" id="protagonista" name="protagonista" value="">
+            <br>
+
+            <label for="deuteragonisci">Deuteragoniści</label>
+            <input type="text" id="deuteragonisci" name="deuteragonisci" value="">
+            <br>
+
+            <label for="antagonisci">Antagoniści</label>
+            <input type="text" id="antagonisci" name="antagonisci" value="">
+            <br>
+
+            <label for="zwroty_akcji">Zwroty akcji</label>
+            <input type="text" id="zwroty_akcji" name="zwroty_akcji" value="">
+            <br>
+
+            <label for="tempo_akcji">Tempo akcji</label>
+            <input type="text" id="tempo_akcji" name="tempo_akcji" value="">
+            <br>
+
+            <label for="humor">Humor</label>
+            <input type="text" id="humor" name="humor" value="">
+            <br>
+
+            <label for="klimat">Klimat</label>
+            <input type="text" id="klimat" name="klimat" value="">
+            <br>
+
+            <label for="tajemnice">Tajemnice</label>
+            <input type="text" id="tajemnice" name="tajemnice" value="">
+            <br>
+
+            <label for="napiecie">Napięcie</label>
+            <input type="text" id="napiecie" name="napiecie" value="">
+            <br>
+
+            <label for="oryginalnosc">Oryginalność</label>
+            <input type="text" id="oryginalnosc" name="oryginalnosc" value="">
+            <br>
+
+            <label for="emocje">Emocje</label>
+            <input type="text" id="emocje" name="emocje" value="">
+            <br>
+
+            <label for="epickosc">Epickość</label>
+            <input type="text" id="epickosc" name="epickosc" value="">
+            <br>
+
+            <!-- update 2.0 -->
+
+            <label for="final">Finał</label>
+            <input type="text" id="final" name="final" value="">
+            <br>
+
+            <label for="rozwiazanie_akcji">Rozwiązanie akcji</label>
+            <input type="text" id="rozwiazanie_akcji" name="rozwiazanie_akcji" value="">
+            <br>
+
+            <label for="kreska">Kreska</label>
+            <input type="text" id="kreska" name="kreska" value="">
+            <br>
+
+            <label for="openingi">Openingi</label>
+            <input type="text" id="openingi" name="openingi" value="">
+            <br>
+
+            <label for="endingi">Endingi</label>
+            <input type="text" id="endingi" name="endingi" value="">
+            <br>
+
+            <label for="aktorzy_glosowi">Aktorzy głosowi</label>
+            <input type="text" id="aktorzy_glosowi" name="aktorzy_glosowi" value="">
+            <br>
+
+            <label for="struktura">Struktura</label>
+            <input type="text" id="struktura" name="struktura" value="">
+            <br>
+
+            <label for="epickosc">Epickość</label>
+            <input type="text" id="epickosc" name="epickosc" value="">
+            <br>
+
+            <label for="czas_rozkrecenia">Czas rozkręcenia</label>
+            <input type="text" id="czas_rozkrecenia" name="czas_rozkrecenia" value="">
+            <br>
+
+            <label for="moralnosc">Moralność</label>
+            <input type="text" id="moralnosc" name="moralnosc" value="">
+            <br>
+
+            <label for="psychodelizm">Psychodelizm</label>
+            <input type="text" id="psychodelizm" name="psychodelizm" value="">
+            <br>
+
+            <label for="jasnosc_przekazu">Jasność Przekazu</label>
+            <input type="text" id="jasnosc_przekazu" name="jasnosc_przekazu" value="">
+            <br>
+
+            <label for="rozwoj_postaci">Rozwój postaci</label>
+            <input type="text" id="rozwoj_postaci" name="rozwoj_postaci" value="">
+            <br>
+
+            <label for="rozwoj_relacji">Rozwój relacji</label>
+            <input type="text" id="rozwoj_relacji" name="rozwoj_relacji" value="">
+            <br>
+
+            <label for="odstapienie">Odstąpienie od wzorców gatunku</label>
+            <input type="text" id="odstapienie" name="odstapienie" value="">
+            <br>
+
+            <label for="kontrowersyjnosc">Kontrowersyjność</label>
+            <input type="text" id="kontrowersyjnosc" name="kontrowersyjnosc" value="">
+            <br>
+
+            <label for="brutalnosc">Brutalność</label>
+            <input type="text" id="brutalnosc" name="brutalnosc" value="">
+            <br>
+
+            <label for="symbolika">Symbolika</label>
+            <input type="text" id="symbolika" name="symbolika" value="">
+            <br>
+
+            <label for="erotycznosc">Erotyczność</label>
+            <input type="text" id="erotycznosc" name="erotycznosc" value="">
+            <br>
+
+            <button type="button" onclick="addAnime()">Dodaj anime</button>
+        </form>
+        <br>
+        <form>
+            <label for="usun_anime">Usuń anime o podanym numerze</label>
+            <input type="text" id="usun_anime" name="usun_anime" value="0">
+            <button type="button" onclick="deleteAnime()">Usuń</button>
+        </form>
+        <br>
+        <table id="allAnimeList"></table>
+    </main>
+    <script src="anime.js"></script>
+    <script src="addAnime.js"></script>
+    <script src="deleteAnime.js"></script>
+    <script src="listAnime.js"></script>
+</body>
+</html>

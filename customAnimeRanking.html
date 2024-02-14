@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="pl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Rank generator</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Encode+Sans:wdth,wght@102.5,100..900&display=swap" rel="stylesheet">
+</head>
+<body>
+    <header>
+        <nav>
+            <a href="index.html" class="leftNav">AnimeRankGenerator</a>
+            <a href="myAnime.html" class="rightNav">Moje anime</a>
+            <a href="allAnimeRanking.html" class="rightNav">Klasyczny ranking</a>
+            <a href="customAnimeRanking.html" class="rightNav">Własny ranking</a>
+        </nav>
+    </header>
+    <main>
+        <h2>Instrukcja obsługi i uwagi</h2>
+        <p>
+            1. Algorytm ten generuje ranking twoich anime, w zależności od wybranych parametrów. <br>
+            2. Wagi parametrów oznaczają jak ważny jest dla ciebie dany aspekt w ocenie anime. <br>
+            3. Wagi powinny być dodanią wartością liczbową (nie muszą być to liczby całkowite) <br>
+            5. Wagi nie mają limitu górnego <br>
+            4. Gdy dane anime jest dla danej wybranej cechy nieokreślone (ma wartość -1), program nie zgodzi się na przeprowadzenie rankingu<br>
+            lub pominie te anime w zależności wyboru opcji poniżej
+            
+        </p>
+        <div class="toFlex">
+            <input type="checkbox" id="ignoreUndefined" name="ignoreUndefined" class="custom-checkbox" value="1">
+            <label for="myCheckbox">Zezwól na ranking, chociaż nie wszystkie z wybranych cech są określone dla twoich anime (takowe zostaną wtedy one zignorowane)</label>
+            <br>
+            <button type="button" onclick="addQuality()">Dodaj cechę</button>
+            <br>
+            <div id="qualities"></div>
+            <button type="button" onclick="generateCustomRanking()">Generuj ranking</button>
+        </div>
+        <table id="customRanking"></table>
+    </main>
+    <script src="anime.js"></script>
+    <script src="generateCustomRanking.js"></script>
+</body>
+</html>

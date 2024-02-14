@@ -1,0 +1,316 @@
+<!DOCTYPE html>
+<html lang="pl">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Rank generator</title>
+    <link rel="stylesheet" href="styles.css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Encode+Sans:wdth,wght@102.5,100..900&display=swap"
+      rel="stylesheet"
+    />
+  </head>
+  <body>
+    <header>
+      <nav>
+        <a href="index.html" class="leftNav">AnimeRankGenerator</a>
+        <a href="myAnime.html" class="rightNav">Moje anime</a>
+        <a href="allAnimeRanking.html" class="rightNav">Klasyczny ranking</a>
+        <a href="customAnimeRanking.html" class="rightNav">Własny ranking</a>
+      </nav>
+    </header>
+    <main>
+      <h2>Instrukcja obsługi i uwagi</h2>
+      <p>
+        1. Algorytm ten generuje ranking twoich anime w zależności od wszystkich
+        parametrów. <br />
+        2. Wagi parametrów oznaczają jak ważny jest dla ciebie dany aspekt w
+        ocenie anime, względem innych. <br />
+        3. Wagi powinny być dodanią wartością liczbową (nie muszą być to liczby
+        całkowite) <br />
+        4. Gdy dane anime jest dla danej cechy nieokreślone (ma wartość -1),
+        program uznaje je za przeciętne, więc liczy, jak gdyby miało wartość 500
+        <br />
+        5. Wagi nie mają limitu górnego (chyba że z jakiegoś powodu potrzebujesz
+        tak duże, że javascript ich nie zna :))
+      </p>
+      <form>
+        <h1>Generuj ranking anime o podanych wagach parametrów</h1>
+        <input
+          type="text"
+          id="fabulaWaga"
+          name="fabulaWaga"
+          value=""
+          placeholder="Waga fabuły"
+        />
+        <br />
+        <input
+          type="text"
+          id="swiatWaga"
+          name="swiatWaga"
+          value=""
+          placeholder="Waga świata"
+        />
+        <br />
+        <input
+          type="text"
+          id="postacieWaga"
+          name="postacieWaga"
+          value=""
+          placeholder="Waga postaci"
+        />
+        <br />
+        <input
+          type="text"
+          id="protagonistaWaga"
+          name="protagonistaWaga"
+          value=""
+          placeholder="Waga protagonistów"
+        />
+        <br />
+        <input
+          type="text"
+          id="deuteragonisciWaga"
+          name="deuteragonisciWaga"
+          value=""
+          placeholder="Waga deuteragonistów"
+        />
+        <br />
+        <input
+          type="text"
+          id="antagonisciWaga"
+          name="antagonisciWaga"
+          value=""
+          placeholder="Waga antagonistów"
+        />
+        <br />
+        <input
+          type="text"
+          id="zwroty_akcjiWaga"
+          name="zwroty_akcjiWaga"
+          value=""
+          placeholder="Waga zwrotów akcji"
+        />
+        <br />
+        <input
+          type="text"
+          id="tempo_akcjiWaga"
+          name="tempo_akcjiWaga"
+          value=""
+          placeholder="Waga tempa akcji"
+        />
+        <br />
+        <input
+          type="text"
+          id="humorWaga"
+          name="humorWaga"
+          value=""
+          placeholder="Waga humoru"
+        />
+        <br />
+        <input
+          type="text"
+          id="klimatWaga"
+          name="klimatWaga"
+          value=""
+          placeholder="Waga klimatu"
+        />
+        <br />
+        <input
+          type="text"
+          id="tajemniceWaga"
+          name="tajemniceWaga"
+          value=""
+          placeholder="Waga tajemnic"
+        />
+        <br />
+        <input
+          type="text"
+          id="napiecieWaga"
+          name="napiecieWaga"
+          value=""
+          placeholder="Waga napięcia"
+        />
+        <br />
+        <input
+          type="text"
+          id="oryginalnoscWaga"
+          name="oryginalnoscWaga"
+          value=""
+          placeholder="Waga oryginalności"
+        />
+        <br />
+        <input
+          type="text"
+          id="emocjeWaga"
+          name="emocjeWaga"
+          value=""
+          placeholder="Waga emocji"
+        />
+        <br />
+        <input
+          type="text"
+          id="epickoscWaga"
+          name="epickoscWaga"
+          value=""
+          placeholder="Waga epickości"
+        />
+        <br />
+        <!-- update 2.0 -->
+        <input
+          type="text"
+          id="finalWaga"
+          name="finalWaga"
+          value=""
+          placeholder="Waga finału"
+        />
+        <br />
+        <input
+          type="text"
+          id="rozwiazanie_akcjiWaga"
+          name="rozwiazanie_akcjiWaga"
+          value=""
+          placeholder="Waga rozwiązania fabuły"
+        />
+        <br />
+        <input
+          type="text"
+          id="kreskaWaga"
+          name="kreskaWaga"
+          value=""
+          placeholder="Waga kreski"
+        />
+        <br />
+        <input
+          type="text"
+          id="openingiWaga"
+          name="openingiWaga"
+          value=""
+          placeholder="Waga openingów"
+        />
+        <br />
+        <input
+          type="text"
+          id="endingiWaga"
+          name="endingiWaga"
+          value=""
+          placeholder="Waga endingów"
+        />
+        <br />
+        <input
+          type="text"
+          id="aktorzy_glosowiWaga"
+          name="aktorzy_glosowiWaga"
+          value=""
+          placeholder="Waga aktorów głosowych"
+        />
+        <br />
+        <input
+          type="text"
+          id="strukturaWaga"
+          name="strukturaWaga"
+          value=""
+          placeholder="Waga struktury"
+        />
+        <br />
+        <input
+          type="text"
+          id="czas_rozkreceniaWaga"
+          name="czas_rozkreceniaWaga"
+          value=""
+          placeholder="Waga czasu rozkręcenia"
+        />
+        <br />
+        <input
+          type="text"
+          id="moralnoscWaga"
+          name="moralnoscWaga"
+          value=""
+          placeholder="Waga moralności"
+        />
+        <br />
+        <input
+          type="text"
+          id="psychodelizmWaga"
+          name="psychodelizmWaga"
+          value=""
+          placeholder="Waga psychodelizmu"
+        />
+        <br />
+        <input
+          type="text"
+          id="jasnosc_przekazuWaga"
+          name="jasnosc_przekazuWaga"
+          value=""
+          placeholder="Waga jasności przekazu"
+        />
+        <br />
+        <input
+          type="text"
+          id="rozwoj_postaciWaga"
+          name="rozwoj_postaciWaga"
+          value=""
+          placeholder="Waga rozwoju postaci"
+        />
+        <br />
+        <input
+          type="text"
+          id="rozwoj_relacjiWaga"
+          name="rozwoj_relacjiWaga"
+          value=""
+          placeholder="Waga rozwoju relacji"
+        />
+        <br />
+        <input
+          type="text"
+          id="odstapienieWaga"
+          name="odstapienieWaga"
+          value=""
+          placeholder="Waga odstąpienia od wzorców gatunku"
+        />
+        <br />
+        <input
+          type="text"
+          id="kontrowersyjnoscWaga"
+          name="kontrowersyjnoscWaga"
+          value=""
+          placeholder="Waga kontrowersyjności"
+        />
+        <br />
+        <input
+          type="text"
+          id="brutalnoscWaga"
+          name="brutalnoscWaga"
+          value=""
+          placeholder="Waga brutalności"
+        />
+        <br />
+        <input
+          type="text"
+          id="symbolikaWaga"
+          name="symbolikaWaga"
+          value=""
+          placeholder="Waga symboliki"
+        />
+        <br />
+        <input
+          type="text"
+          id="erotycznoscWaga"
+          name="erotycznoscWaga"
+          value=""
+          placeholder="Waga erotyczności"
+        />
+        <br />
+        <button type="button" onclick="generateRanking()">
+          Generuj ranking
+        </button>
+      </form>
+      <p id="sumaWag"></p>
+      <table id="ranking"></table>
+    </main>
+    <script src="anime.js"></script>
+    <script src="generateRanking.js"></script>
+  </body>
+</html>

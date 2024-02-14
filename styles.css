@@ -1,0 +1,215 @@
+td {
+    border: 4px solid;
+    border-color: #94a3b8;
+    font-family: "Encode Sans", sans-serif;
+    font-optical-sizing: auto;
+    font-weight: 700;
+    font-style: normal;
+    font-variation-settings:
+    "wdth" 102.5;
+    color: #64748b;
+    text-align: center;
+}  
+
+th {
+    border: 4px solid;
+    border-color: #475569;
+    font-family: "Encode Sans", sans-serif;
+    font-optical-sizing: auto;
+    font-weight: 700;
+    font-style: normal;
+    font-variation-settings:
+    "wdth" 102.5;
+    color: #475569;
+    text-align: center;
+}
+
+table {
+    border-collapse: collapse;
+    width: 40%;
+}
+
+
+input, label {
+    margin-bottom: 5px;
+}
+
+header {
+    height: auto;
+    padding: 5px;
+    background-color: white;
+    border-bottom: 1px solid #94a3b8;
+    /* box-shadow: 0 5px 5px rgba(0,0,0,.1); */
+    border-left:50px solid transparent;
+    border-right:150px solid transparent;
+}
+
+body {
+    margin: 0;
+    padding: 0;
+    border: 0;
+    font-size: 100%;
+    font: inherit;
+  }
+
+main {
+    margin: 15px;
+}
+
+
+nav {
+  font-family: "Encode Sans", sans-serif;
+  font-optical-sizing: auto;
+  font-weight: 700;
+  font-style: normal;
+  font-variation-settings:
+    "wdth" 102.5;
+  color: #083344;
+  font-size: 25px;
+}
+
+a {
+    text-decoration: none;
+    color: inherit;
+    margin: 10px;
+}
+
+a:hover {
+    color: #67e8f9;
+}
+
+h1, h2 {
+  font-family: "Encode Sans", sans-serif;
+  font-optical-sizing: auto;
+  font-weight: 700;
+  font-style: normal;
+  font-variation-settings:
+    "wdth" 102.5;
+  color: #155e75;
+  font-size: 25px;
+}
+
+h2 {
+    font-weight: 500;
+}
+
+p {
+    font-family: "Encode Sans", sans-serif;
+  font-optical-sizing: auto;
+  font-weight: 500;
+  font-style: normal;
+  font-variation-settings:
+    "wdth" 102.5;
+  color: #083344;
+  font-size: 18px;
+}
+
+label {
+    font-family: "Encode Sans", sans-serif;
+    font-optical-sizing: auto;
+    font-weight: 800;
+    font-style: normal;
+    font-variation-settings:
+      "wdth" 102.5;
+    color: #083344;
+    font-size: 18px;
+}
+
+input {
+    font-family: "Encode Sans", sans-serif;
+    font-optical-sizing: auto;
+    font-weight: 700;
+    font-style: normal;
+    font-variation-settings:
+      "wdth" 102.5;
+    color: #0e7490;
+    font-size: 16px;
+}
+
+input::placeholder {
+    color: #164e63;
+}
+
+.toBold {
+    font-weight: 900;
+}
+
+.toRed {
+    color: #dc2626;
+}
+
+button {
+    border: none; 
+    outline: none; 
+    border-radius: 6px;
+    background-color: #ef4444; 
+    color: #ffffff;
+    padding: 3px 10px; 
+    text-decoration: none; 
+    font-family: "Encode Sans", sans-serif;
+    font-optical-sizing: auto;
+    font-weight: 500;
+    font-style: normal;
+    font-variation-settings:
+      "wdth" 102.5;
+    font-size: 16px;
+    margin-right: 10px;
+    margin-top: 2px;
+    margin-bottom: 2px;
+  }
+  
+  /* Dodatkowy styl po najechaniu myszą */
+  button:hover {
+    background-color: #dc2626; /* Zmiana koloru tła po najechaniu */
+  }
+
+select {
+    margin-right: 10px;
+}
+  
+.deleteButton {
+    background-color:#2563eb;
+}
+
+.deleteButton:hover {
+    background-color: #1d4ed8;
+}
+
+.custom-checkbox {
+    width: 24px;
+    height: 24px;
+  }
+
+  .custom-checkbox input[type="checkbox"] {
+    opacity: 0;
+  }
+
+  .custom-checkbox input[type="checkbox"] + label {
+    display: inline-block;
+    width: 20px; 
+    height: 20px; 
+    background-color: #fff; 
+    border: 2px solid #000; 
+    border-radius: 4px; 
+  }
+
+  .custom-checkbox input[type="checkbox"]:checked + label {
+    background-color: #007bff;
+  }
+
+.toDarkRed {
+    color: #7f1d1d;
+}
+
+select {
+    background-color: #cbd5e1;
+    border: none;
+    padding: 4px;
+    text-decoration: none; 
+    font-family: "Encode Sans", sans-serif;
+    font-optical-sizing: auto;
+    font-weight: 500;
+    font-style: normal;
+    font-variation-settings:
+      "wdth" 102.5;
+}
